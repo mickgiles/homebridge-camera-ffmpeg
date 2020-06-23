@@ -94,7 +94,7 @@ export class StreamingDelegate implements CameraStreamingDelegate {
     }
 
     const vf = [];
-    const videoFilter = filter === '' || filter === null ? 'scale=' + resolution : filter; // empty string or null indicates default
+    const videoFilter = 'scale=' + resolution; // empty string or null indicates default
     // In the case of null, skip entirely
     if (videoFilter !== null && videoFilter !== 'none') {
       if (hflip) {
